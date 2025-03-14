@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB8DE02F2D84824F0094FD46 /* mvvmApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DE02E2D84824F0094FD46 /* mvvmApp.swift */; };
 		FB8DE0312D84824F0094FD46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DE0302D84824F0094FD46 /* ContentView.swift */; };
 		FB8DE0332D84824F0094FD46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8DE0322D84824F0094FD46 /* Assets.xcassets */; };
 		FB8DE0362D84824F0094FD46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8DE0352D84824F0094FD46 /* Preview Assets.xcassets */; };
+		FB8DE03F2D8483EA0094FD46 /* serie_informacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DE03E2D8483EA0094FD46 /* serie_informacion.swift */; };
+		FB8DE0412D848B2F0094FD46 /* vista_modelo_basico.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DE0402D848B2F0094FD46 /* vista_modelo_basico.swift */; };
+		FB8DE0432D848CA50094FD46 /* primera_pantalla.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8DE0422D848CA50094FD46 /* primera_pantalla.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB8DE02B2D84824F0094FD46 /* mvvm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvvm.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB8DE02E2D84824F0094FD46 /* mvvmApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvvmApp.swift; sourceTree = "<group>"; };
 		FB8DE0302D84824F0094FD46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB8DE0322D84824F0094FD46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB8DE0352D84824F0094FD46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB8DE03E2D8483EA0094FD46 /* serie_informacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = serie_informacion.swift; sourceTree = "<group>"; };
+		FB8DE0402D848B2F0094FD46 /* vista_modelo_basico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vista_modelo_basico.swift; sourceTree = "<group>"; };
+		FB8DE0422D848CA50094FD46 /* primera_pantalla.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = primera_pantalla.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		FB8DE02D2D84824F0094FD46 /* mvvm */ = {
 			isa = PBXGroup;
 			children = (
-				FB8DE02E2D84824F0094FD46 /* mvvmApp.swift */,
+				FB8DE03D2D8483570094FD46 /* modelos */,
+				FB8DE03C2D8483420094FD46 /* vistas_modelos */,
 				FB8DE0302D84824F0094FD46 /* ContentView.swift */,
 				FB8DE0322D84824F0094FD46 /* Assets.xcassets */,
 				FB8DE0342D84824F0094FD46 /* Preview Content */,
+				FB8DE0422D848CA50094FD46 /* primera_pantalla.swift */,
 			);
 			path = mvvm;
 			sourceTree = "<group>";
@@ -65,6 +71,22 @@
 				FB8DE0352D84824F0094FD46 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB8DE03C2D8483420094FD46 /* vistas_modelos */ = {
+			isa = PBXGroup;
+			children = (
+				FB8DE0402D848B2F0094FD46 /* vista_modelo_basico.swift */,
+			);
+			path = vistas_modelos;
+			sourceTree = "<group>";
+		};
+		FB8DE03D2D8483570094FD46 /* modelos */ = {
+			isa = PBXGroup;
+			children = (
+				FB8DE03E2D8483EA0094FD46 /* serie_informacion.swift */,
+			);
+			path = modelos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB8DE0312D84824F0094FD46 /* ContentView.swift in Sources */,
-				FB8DE02F2D84824F0094FD46 /* mvvmApp.swift in Sources */,
+				FB8DE0412D848B2F0094FD46 /* vista_modelo_basico.swift in Sources */,
+				FB8DE0432D848CA50094FD46 /* primera_pantalla.swift in Sources */,
+				FB8DE03F2D8483EA0094FD46 /* serie_informacion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
