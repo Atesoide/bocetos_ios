@@ -7,21 +7,26 @@
 
 import Foundation
 
-struct Temporada{
+struct Temporada: Identifiable{
+    var id = UUID()
+    
     var nombre: String
     var cantidadCapitulos: Int
 }
 
-struct Plataforma{
+struct Plataforma: Identifiable{
+    var id = UUID()
+    
     var nombre: String
     var icono: String
 }
 
 struct InformacionSerie: Identifiable{
-    //var id:
+    var id = UUID()//Universal Unique ID
+    
     var nombre: String
     var tipo: String
-    var plataformas: [Plataforma] = [] //Aqui tengo una deuda técnica para indicar otras plataformas de forma más fácil
+    var plataformas: [Plataforma] = [] 
     var fechaEstreno: Int
     var sinopsis: String
     var temporadas: [Temporada] = []

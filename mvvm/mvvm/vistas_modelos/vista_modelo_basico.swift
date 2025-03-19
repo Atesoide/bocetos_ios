@@ -9,10 +9,20 @@ import Foundation
 
 @Observable
 class VistaModeloBasico{
+var estadoActualDeLaApp: EstadosDeLaApplicacion = .mostrandoSeries
     var seriesRegistradas: Array<InformacionSerie> = []
     
-    func agregarSerie() -> Void{
-        print("Hola mundo desde el controlador")
-        seriesRegistradas.append(InformacionSerie(nombre: "prueba", tipo: "prueba", fechaEstreno: 2017, sinopsis: "Inserte Sinopsis larga", caratula: "Imagen_fake_1"))
+    func agregarSerie(serie: InformacionSerie? = nil) -> Bool{
+        if let serieNueva = serie{
+            if serieNueva.nombre == ""{
+                return false
+            }
+            seriesRegistradas.append(serieNueva)
+        }
+        else{
+            seriesRegistradas.append(InformacionSerie(nombre: "prueba", tipo: "prueba", fechaEstreno: 2017, sinopsis: "Inserte Sinopsis larga", caratula: "Imagen_fake_1"))
+        }
+        
+        return true
     }
 }
