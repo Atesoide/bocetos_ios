@@ -12,6 +12,7 @@ struct Temporada: Identifiable{
     
     var nombre: String
     var cantidadCapitulos: Int
+    var imagen: String = ""
 }
 
 struct Plataforma: Identifiable{

@@ -23,6 +23,10 @@ var estadoActualDeLaApp: EstadosDeLaApplicacion = .mostrandoSeries
             seriesRegistradas.append(InformacionSerie(nombre: "prueba", tipo: "prueba", fechaEstreno: 2017, sinopsis: "Inserte Sinopsis larga", caratula: "Imagen_fake_1"))
         }
         
+        estadoActualDeLaApp = .mostrandoSeries
         return true
+    }
+    func cambiarAAgregarSerie() -> Void{
+        estadoActualDeLaApp = .agregandoSeries
     }
 }
