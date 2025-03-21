@@ -22,7 +22,7 @@ struct AgregarSerie: View {
     @State var mostrarAgregarPlataformas: Bool = false
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Agrega una serie")
         TextField("El nombre de la serie", text: $nombreDeLaSerie)
         TextField("Tipo", text: $tipoDeLaSerie)
         
@@ -38,6 +38,9 @@ struct AgregarSerie: View {
             }
         }.sheet(isPresented: $mostrarAgregarPlataformas) {
             Text("Por favor agregar plataforma")
+                .foregroundStyle(Color.black)
+                .padding(15)
+                .bold()
             
             TextField("Nombre de la plataforma", text: $nombrePlataforma)
             TextField("Indica la imagen", text: $imagenPlataforma)
