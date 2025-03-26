@@ -7,14 +7,16 @@
 
 import Foundation
 import SwiftUI
-
-class ControladorPublicaciones: ObservableObject{
-    @Published var publicaciones: [Publicacion] = []
-    
-    let urlDePublicaciones = "https://jsonplaceholder.typicode.com/posts"
-    
-    func obtenerPublicaciones() async {
-        guard let publicacionesDescargadas: [Publicacion] = try? await PlaceHolderAPI().descargarPublicaciones(desde: urlDePublicaciones) else { return }
-        publicaciones = publicacionesDescargadas
-    }
-}
+/*
+ 
+ class ControladorPublicaciones: ObservableObject{
+ @Published var publicaciones: [Publicacion] = []
+ 
+ 
+ 
+ func obtenerPublicaciones() async {
+ guard let publicacionesDescargadas: [Publicacion] = try? await PlaceHolderAPI().descargarPublicaciones(desde: urlDePublicaciones) else { return }
+ publicaciones = publicacionesDescargadas
+ }
+ }
+ */
