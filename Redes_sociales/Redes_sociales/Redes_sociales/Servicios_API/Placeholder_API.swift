@@ -11,13 +11,21 @@ import Foundation
 class PlaceHolderAPI: Codable{
     let urlDeServicio = "https://jsonplaceholder.typicode.com"
     func descargarPublicaciones() async throws -> [Publicacion]?{
+        let ubicacionRecurso = "/posts"
+        return await descargar(recurso: ubicacionRecurso)
+    }
+    func descargarComentarios(postId: Int) async -> [Comentario]?{
+        let ubicacionRecurso = "/posts/\(postId)/comments"
+        return await descargar(recurso: ubicacionRecurso)
+    }
+    func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico?{
         do{
-            guard let url = URL(string: "\(urlDeServicio)/posts") else{ throw ErroresDeRed.malaDireccionUrl }
+            guard let url = URL(string: "\(urlDeServicio)\(recurso)") else{ throw ErroresDeRed.malaDireccionUrl }
             let (datos, respuesta) = try await URLSession.shared.data(from: url)
             guard let respuesta = respuesta as? HTTPURLResponse else { throw ErroresDeRed.badResponse }
             guard respuesta.statusCode >= 200 && respuesta.statusCode < 300 else { throw ErroresDeRed.badStatus}
             
-            guard let respuestaDecodificada = try? JSONDecoder().decode([Publicacion].self, from: datos) else { throw ErroresDeRed.fallaAlConvertirLaRespuesta}
+            guard let respuestaDecodificada = try? JSONDecoder().decode(TipoGenerico.self, from: datos) else { throw ErroresDeRed.fallaAlConvertirLaRespuesta}
             return respuestaDecodificada
         } catch ErroresDeRed.malaDireccionUrl{
             print("Tenes mal la url capo, cambiala")
@@ -33,6 +41,9 @@ class PlaceHolderAPI: Codable{
         }
         catch ErroresDeRed.invalidRequest{
             print("Como llegaste aqui?")
+        }
+        catch{
+            
         }
         return nil
     }
