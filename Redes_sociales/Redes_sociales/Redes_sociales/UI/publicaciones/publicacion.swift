@@ -10,15 +10,24 @@ let publicacionFalsa = Publicacion(userId: 1, id: 1, title: "Lorem ipsum", body:
 
 struct PublicacionVista: View {
     
-    let publicacionAMostrar: Publicacion
+    //let publicacionAMostrar: Publicacion
     @Environment(ControladorAplicacion.self) var controlador
     var body: some View {
         
-        Text("\(publicacionAMostrar.title)")
-        Text("\(publicacionAMostrar.body)")
+        Text("\(controlador.publicacionSeleccionada?.title)")
+        Text("\(controlador.publicacionSeleccionada?.body)")
+        NavigationLink{
+            Text("Hola mundo")
+        } label: {
+            Text("Ver perfil")
+        }
         
         ScrollView{
             VStack{
+                ForEach(controlador.comentarios){ comentario in
+                    Text("Usuario: \(comentario.name)")
+                    Text("\(comentario.body)")
+                }
                 //Foreach
             }
         }
@@ -26,6 +35,9 @@ struct PublicacionVista: View {
 }
 
 #Preview {
-    PublicacionVista(publicacionAMostrar: publicacionFalsa)
-        .environment(ControladorAplicacion())
+    NavigationStack{
+        PublicacionVista()
+            .environment(ControladorAplicacion())
+    }
+    
 }
