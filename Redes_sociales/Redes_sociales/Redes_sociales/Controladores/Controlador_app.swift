@@ -13,6 +13,7 @@ import SwiftUI
 public class ControladorAplicacion{
     var publicaciones: Array<Publicacion> = []
     var comentarios: Array<Comentario> = []
+    var perfilAMostrar: Perfil? = nil
     
     var publicacionSeleccionada: Publicacion? = nil
     
@@ -45,5 +46,16 @@ public class ControladorAplicacion{
         Task.detached(operation: {
             await self.descargarComentarios()
         })
+    }
+    
+    func descargarPerfil(id: Int) async -> Void{
+        guard let perfil: Perfil = try? await PlaceHolderAPI().descargarPerfil(id: id) else { return }
+        perfilAMostrar = perfil
+    }
+    
+    func verPerfil(id: Int) -> Void{
+        Task.detached{
+            await self.descargarPerfil(id: id)
+        }
     }
 }
