@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GenerarlPublicaciones: View {
+    var largoDePantalla = UIScreen.main.bounds.width
     //@StateObject var controlador = ControladorPublicaciones()
     @Environment(ControladorAplicacion.self) var controlador
     
@@ -19,14 +20,23 @@ struct GenerarlPublicaciones: View {
                         NavigationLink{
                             PublicacionVista()
                         } label: {
-                            HStack{
-                                Text("\(publicacion.id)")
-                                VStack{
-                                    Text("\(publicacion.title)")
-                                    Text("\(publicacion.body)")
+                            VStack(alignment: HorizontalAlignment.leading){
+                                HStack(alignment: VerticalAlignment.center){
+                                    Text("\(publicacion.id)").background(Color.red)
+                                        .padding(10)
+                                        .frame(alignment: .center)
+                                    
+                                    Spacer()
+                                    
+                                    Text("\(publicacion.title)").background(Color.yellow)
+                                        .frame(alignment: .center)
+                                    Spacer()
                                 }
-
-                            }
+                                
+                                Text("\(publicacion.body)")
+                            }.background(Color.mint)
+                                .frame(width: largoDePantalla - 10, alignment: Alignment.center)
+                                .padding()
                             
                             /*.onTapGesture {
                                 print("usted ha seleccionado: \(publicacion.id)")
@@ -37,6 +47,7 @@ struct GenerarlPublicaciones: View {
                     }
                 
                 }
+                
             }
         }
         

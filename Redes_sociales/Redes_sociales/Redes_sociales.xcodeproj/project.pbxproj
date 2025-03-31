@@ -21,6 +21,7 @@
 		FB3FC03C2D91BE17005E4822 /* publicaciones_general.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3FC03B2D91BE17005E4822 /* publicaciones_general.swift */; };
 		FB7894972D9700F700A23A0F /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7894962D9700F700A23A0F /* perfil.swift */; };
 		FB78949A2D97045B00A23A0F /* perfil_vista_basica.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7894992D97045B00A23A0F /* perfil_vista_basica.swift */; };
+		FB91CFE62D9AEC76004DCA19 /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91CFE52D9AEC76004DCA19 /* menu_aplicacion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		FB3FC03B2D91BE17005E4822 /* publicaciones_general.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicaciones_general.swift; sourceTree = "<group>"; };
 		FB7894962D9700F700A23A0F /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
 		FB7894992D97045B00A23A0F /* perfil_vista_basica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_vista_basica.swift; sourceTree = "<group>"; };
+		FB91CFE52D9AEC76004DCA19 /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		FB3FC0392D91BDEB005E4822 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FB91CFE42D9AEC49004DCA19 /* menu_inicial */,
 				FB7894982D97043B00A23A0F /* perfil_basico */,
 				FB3FC03A2D91BDFB005E4822 /* publicaciones */,
 			);
@@ -143,6 +146,14 @@
 				FB7894992D97045B00A23A0F /* perfil_vista_basica.swift */,
 			);
 			path = perfil_basico;
+			sourceTree = "<group>";
+		};
+		FB91CFE42D9AEC49004DCA19 /* menu_inicial */ = {
+			isa = PBXGroup;
+			children = (
+				FB91CFE52D9AEC76004DCA19 /* menu_aplicacion.swift */,
+			);
+			path = menu_inicial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB91CFE62D9AEC76004DCA19 /* menu_aplicacion.swift in Sources */,
 				FB3FC03C2D91BE17005E4822 /* publicaciones_general.swift in Sources */,
 				FB3FC0342D91B49F005E4822 /* Placeholder_API.swift in Sources */,
 				FB78949A2D97045B00A23A0F /* perfil_vista_basica.swift in Sources */,
