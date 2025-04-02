@@ -22,6 +22,11 @@
 		FB7894972D9700F700A23A0F /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7894962D9700F700A23A0F /* perfil.swift */; };
 		FB78949A2D97045B00A23A0F /* perfil_vista_basica.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7894992D97045B00A23A0F /* perfil_vista_basica.swift */; };
 		FB91CFE62D9AEC76004DCA19 /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91CFE52D9AEC76004DCA19 /* menu_aplicacion.swift */; };
+		FBB774BB2D9D94270082AAE3 /* mono_chino.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB774BA2D9D94270082AAE3 /* mono_chino.swift */; };
+		FBB774BD2D9D96690082AAE3 /* planeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB774BC2D9D96690082AAE3 /* planeta.swift */; };
+		FBB774BF2D9D975E0082AAE3 /* transformacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB774BE2D9D975E0082AAE3 /* transformacion.swift */; };
+		FBB774C12D9D98B60082AAE3 /* dragonball_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB774C02D9D98B60082AAE3 /* dragonball_api.swift */; };
+		FBB774C42D9D9A7D0082AAE3 /* pagina_resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB774C32D9D9A7D0082AAE3 /* pagina_resultados.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 		FB7894962D9700F700A23A0F /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
 		FB7894992D97045B00A23A0F /* perfil_vista_basica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_vista_basica.swift; sourceTree = "<group>"; };
 		FB91CFE52D9AEC76004DCA19 /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
+		FBB774BA2D9D94270082AAE3 /* mono_chino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mono_chino.swift; sourceTree = "<group>"; };
+		FBB774BC2D9D96690082AAE3 /* planeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeta.swift; sourceTree = "<group>"; };
+		FBB774BE2D9D975E0082AAE3 /* transformacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transformacion.swift; sourceTree = "<group>"; };
+		FBB774C02D9D98B60082AAE3 /* dragonball_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragonball_api.swift; sourceTree = "<group>"; };
+		FBB774C32D9D9A7D0082AAE3 /* pagina_resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagina_resultados.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,7 @@
 			children = (
 				FB3FC0332D91B49F005E4822 /* Placeholder_API.swift */,
 				FB3FC0352D91B4AA005E4822 /* Errores.swift */,
+				FBB774C02D9D98B60082AAE3 /* dragonball_api.swift */,
 			);
 			path = Servicios_API;
 			sourceTree = "<group>";
@@ -114,6 +125,7 @@
 		FB3FC0302D91B1C5005E4822 /* Modelos */ = {
 			isa = PBXGroup;
 			children = (
+				FBB774B92D9D94110082AAE3 /* dragon_ball */,
 				FB3FC0312D91B26A005E4822 /* Publicacion.swift */,
 				FB3950E62D94633200E25427 /* comentario.swift */,
 				FB7894962D9700F700A23A0F /* perfil.swift */,
@@ -154,6 +166,25 @@
 				FB91CFE52D9AEC76004DCA19 /* menu_aplicacion.swift */,
 			);
 			path = menu_inicial;
+			sourceTree = "<group>";
+		};
+		FBB774B92D9D94110082AAE3 /* dragon_ball */ = {
+			isa = PBXGroup;
+			children = (
+				FBB774C22D9D9A6B0082AAE3 /* Soporte */,
+				FBB774BA2D9D94270082AAE3 /* mono_chino.swift */,
+				FBB774BC2D9D96690082AAE3 /* planeta.swift */,
+				FBB774BE2D9D975E0082AAE3 /* transformacion.swift */,
+			);
+			path = dragon_ball;
+			sourceTree = "<group>";
+		};
+		FBB774C22D9D9A6B0082AAE3 /* Soporte */ = {
+			isa = PBXGroup;
+			children = (
+				FBB774C32D9D9A7D0082AAE3 /* pagina_resultados.swift */,
+			);
+			path = Soporte;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,12 +262,17 @@
 				FB3FC0342D91B49F005E4822 /* Placeholder_API.swift in Sources */,
 				FB78949A2D97045B00A23A0F /* perfil_vista_basica.swift in Sources */,
 				FB3FC0322D91B26A005E4822 /* Publicacion.swift in Sources */,
+				FBB774BF2D9D975E0082AAE3 /* transformacion.swift in Sources */,
 				FB7894972D9700F700A23A0F /* perfil.swift in Sources */,
+				FBB774C42D9D9A7D0082AAE3 /* pagina_resultados.swift in Sources */,
 				FB3FC0232D91B0BE005E4822 /* ContentView.swift in Sources */,
+				FBB774C12D9D98B60082AAE3 /* dragonball_api.swift in Sources */,
 				FB3950E72D94633200E25427 /* comentario.swift in Sources */,
+				FBB774BB2D9D94270082AAE3 /* mono_chino.swift in Sources */,
 				FB3950E52D945E8C00E25427 /* publicacion.swift in Sources */,
 				FB3FC0382D91BC3E005E4822 /* controlador_publicaciones.swift in Sources */,
 				FB3FC0362D91B4AA005E4822 /* Errores.swift in Sources */,
+				FBB774BD2D9D96690082AAE3 /* planeta.swift in Sources */,
 				FB3FC0212D91B0BE005E4822 /* Redes_socialesApp.swift in Sources */,
 				FB3950E32D94538200E25427 /* Controlador_app.swift in Sources */,
 			);

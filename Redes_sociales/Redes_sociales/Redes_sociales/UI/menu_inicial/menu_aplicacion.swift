@@ -19,8 +19,7 @@ struct MenuNavegacion: View {
                 .tabItem {
                     Label{
                         VStack{
-                            Text("Hola")
-                            Text("Esto es un segundo click")
+                            Text("Dragon ball DB")
                         }
                         
                     } icon: {

@@ -20,7 +20,12 @@ public class ControladorAplicacion{
     init(){
         Task.detached(priority: .high){
             await self.descargarPublicaciones()
+            
+            await self.descargarMonosChinos()
         }
+    }
+    func descargarMonosChinos() async{
+        await print(DragonBallAPI().descargarPaginaPersonajes())
     }
     func descargarPublicaciones() async{
         defer{
