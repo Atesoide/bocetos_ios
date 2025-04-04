@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB08B0382DA0340F00E29ECA /* pantalla_personajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB08B0372DA0340F00E29ECA /* pantalla_personajes.swift */; };
 		FB3950E32D94538200E25427 /* Controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3950E22D94538200E25427 /* Controlador_app.swift */; };
 		FB3950E52D945E8C00E25427 /* publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3950E42D945E8C00E25427 /* publicacion.swift */; };
 		FB3950E72D94633200E25427 /* comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3950E62D94633200E25427 /* comentario.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB08B0372DA0340F00E29ECA /* pantalla_personajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_personajes.swift; sourceTree = "<group>"; };
 		FB3950E22D94538200E25427 /* Controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controlador_app.swift; sourceTree = "<group>"; };
 		FB3950E42D945E8C00E25427 /* publicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicacion.swift; sourceTree = "<group>"; };
 		FB3950E62D94633200E25427 /* comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comentario.swift; sourceTree = "<group>"; };
@@ -64,6 +66,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB08B0362DA033ED00E29ECA /* dragon_ball */ = {
+			isa = PBXGroup;
+			children = (
+				FB08B0372DA0340F00E29ECA /* pantalla_personajes.swift */,
+			);
+			path = dragon_ball;
+			sourceTree = "<group>";
+		};
 		FB3FC0142D91B0BE005E4822 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 		FB3FC0392D91BDEB005E4822 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FB08B0362DA033ED00E29ECA /* dragon_ball */,
 				FB91CFE42D9AEC49004DCA19 /* menu_inicial */,
 				FB7894982D97043B00A23A0F /* perfil_basico */,
 				FB3FC03A2D91BDFB005E4822 /* publicaciones */,
@@ -259,6 +270,7 @@
 			files = (
 				FB91CFE62D9AEC76004DCA19 /* menu_aplicacion.swift in Sources */,
 				FB3FC03C2D91BE17005E4822 /* publicaciones_general.swift in Sources */,
+				FB08B0382DA0340F00E29ECA /* pantalla_personajes.swift in Sources */,
 				FB3FC0342D91B49F005E4822 /* Placeholder_API.swift in Sources */,
 				FB78949A2D97045B00A23A0F /* perfil_vista_basica.swift in Sources */,
 				FB3FC0322D91B26A005E4822 /* Publicacion.swift in Sources */,

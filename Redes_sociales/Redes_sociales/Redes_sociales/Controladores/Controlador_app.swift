@@ -17,6 +17,9 @@ public class ControladorAplicacion{
     
     var publicacionSeleccionada: Publicacion? = nil
     
+    //Seccion DB
+    var paginaResultados: PaginaResultado? = nil
+    
     init(){
         Task.detached(priority: .high){
             await self.descargarPublicaciones()
@@ -25,7 +28,9 @@ public class ControladorAplicacion{
         }
     }
     func descargarMonosChinos() async{
-        await print(DragonBallAPI().descargarPaginaPersonajes())
+        guard let paginaDescargada: PaginaResultado = try? await DragonBallAPI().descargarPaginaPersonajes() else{return}
+        self.paginaResultados = paginaDescargada
+
     }
     func descargarPublicaciones() async{
         defer{

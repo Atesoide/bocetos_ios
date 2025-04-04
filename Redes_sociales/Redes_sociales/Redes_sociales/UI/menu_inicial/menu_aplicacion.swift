@@ -14,8 +14,7 @@ struct MenuNavegacion: View {
             GenerarlPublicaciones()
                 .tabItem { Label("Es esta pantalla \n otra parte", systemImage: "circle") }
                 .badge(controlador.publicaciones.count)
-            
-            Text("Hola dos")
+            PantallaPersonajes()
                 .tabItem {
                     Label{
                         VStack{
@@ -28,6 +27,7 @@ struct MenuNavegacion: View {
                             .overlay(Text("JJ Abarhams"))
                     }
                 }
+            
             Text("Hola una vez más")
                 .tabItem {
                     Label("Etiqueta de esta label", systemImage: "circle")
