@@ -15,31 +15,49 @@ struct PantallaPersonajes: View {
                 ScrollView{
                     LazyVStack{
                         ForEach(controlador.paginaResultados!.items){ personaje in
-                            NavigationLink{
-                                PreviewPersonaje()
-                            }label:{
-                                AsyncImage(url: URL(string: personaje.image)){imagen in
-                                    imagen
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 50)
-                                        .clipShape(Rectangle())
-                                } placeholder: {
-                                    ProgressView()
-                                        .padding()
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                                        .background(Color.red)
-                                        .clipShape(Circle())
-                                }
-                                Text("\(personaje.name)")
-                                
+                            
+                            HStack(alignment: VerticalAlignment.center){
+                                NavigationLink{
+                                    PreviewPersonaje()
+                                }label:{
+                                    Spacer()
+                                    AsyncImage(url: URL(string: personaje.image)){imagen in
+                                        imagen
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 50)
+                                            .clipShape(Rectangle())
+                                    } placeholder: {
+                                        ProgressView()
+                                            .padding()
+                                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                            .background(Color.red)
+                                            .clipShape(Circle())
+                                    }
+                                    Spacer()
+                                    Text("\(personaje.name)")
+                                        .foregroundStyle(Color.red)
+                                        .bold()
+                                        .underline()
+                                        
+                                    Spacer()
                                     
+                                        
+                                }
                             }
+                            .frame(maxWidth: 300)
+                            .padding()
+                            .background(Color.yellow)
+                            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                            
+                            
                             
                         }
                     }
                 }
+                .background(Color.orange)
             }
+            
             
             
         }

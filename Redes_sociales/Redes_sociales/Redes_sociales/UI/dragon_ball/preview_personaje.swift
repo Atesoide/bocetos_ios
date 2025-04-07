@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct PreviewPersonaje: View {
+    @Environment(ControladorAplicacion.self) var controlador
+    let persobaje: MonoChino
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hola")
     }
 }
 
 #Preview {
     PreviewPersonaje()
+        .environment(ControladorAplicacion())
 }
