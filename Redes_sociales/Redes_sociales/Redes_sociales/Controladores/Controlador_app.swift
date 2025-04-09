@@ -19,6 +19,7 @@ public class ControladorAplicacion{
     
     //Seccion DB
     var paginaResultados: PaginaResultado? = nil
+    var personaje: MonoChino? = nil
     
     init(){
         Task.detached(priority: .high){
@@ -31,6 +32,16 @@ public class ControladorAplicacion{
         guard let paginaDescargada: PaginaResultado = try? await DragonBallAPI().descargarPaginaPersonajes() else{return}
         self.paginaResultados = paginaDescargada
 
+    }
+    func descargarInfoPersonajes(id: Int) async{
+        guard let monoChino: MonoChino = try? await DragonBallAPI().descargarInformacionPersonaje(id: id) else {return}
+        
+        self.personaje = monoChino
+    }
+    func descargarInformacionPersonaje(id: Int){
+        Task.detached(operation: {
+            await self.descargarInfoPersonajes(id: id)
+        })
     }
     func descargarPublicaciones() async{
         defer{

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PreviewPersonaje: View {
     @Environment(ControladorAplicacion.self) var controlador
-    let persobaje: MonoChino
+    //let persobaje: MonoChino
     var body: some View {
         Text("Hola")
     }

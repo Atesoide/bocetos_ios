@@ -15,6 +15,10 @@ class DragonBallAPI: Codable{
         
         return await descargar(recurso: ubicacionRecurso)
     }
+    func descargarInformacionPersonaje(id: Int) async -> MonoChino?{
+        let ubicacionRecurso = "/characters/\(id)"
+        return await descargar(recurso: ubicacionRecurso)
+    }
     
     private func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico?{
         do{
