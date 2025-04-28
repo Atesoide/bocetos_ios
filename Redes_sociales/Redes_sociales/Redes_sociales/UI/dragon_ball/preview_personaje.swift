@@ -6,16 +6,33 @@
 //
 
 import SwiftUI
-
+let defaul: MonoChino = MonoChino(id: 1, name: "safdaf", ki: "sdfrw", maxKi: "dfdf", race: "dfdfd", gender: "H", description: "Tonoto", image: "", affiliation: "Bueno", originPlanet: nil, transformations: nil)
 struct PreviewPersonaje: View {
     @Environment(ControladorAplicacion.self) var controlador
-    //let persobaje: MonoChino
+    var personaje: MonoChino
+    
+    
     var body: some View {
-        Text("Hola")
+        Text(controlador.personaje?.originPlanet?.name ?? "Planeta")
+        AsyncImage(url: URL(string: controlador.personaje?.originPlanet!.image ?? "")){imagen in
+            imagen
+                .resizable()
+                .scaledToFit()
+                .frame(width: 50)
+                .clipShape(Rectangle())
+        } placeholder: {
+            ProgressView()
+                .padding()
+                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                .background(Color.red)
+                .clipShape(Circle())
+        }.onAppear {
+            print(personaje)
+        }
     }
 }
 
 #Preview {
-    PreviewPersonaje()
+    PreviewPersonaje(personaje: defaul)
         .environment(ControladorAplicacion())
 }

@@ -18,8 +18,9 @@ struct PantallaPersonajes: View {
                             
                             HStack(alignment: VerticalAlignment.center){
                                 NavigationLink{
-                                    //PreviewPersonaje()
-                                    Text("Hola \(controlador.personaje?.originPlanet?.name)")
+                                    PreviewPersonaje(personaje: personaje)
+                                    //Text("Hola \(controlador.personaje?.originPlanet?.name)")
+                                    //AsyncImage(url: URL(string: controlador.personaje?.originPlanet!.image ?? ""))
                                 }label:{
                                     Spacer()
                                     AsyncImage(url: URL(string: personaje.image)){imagen in
