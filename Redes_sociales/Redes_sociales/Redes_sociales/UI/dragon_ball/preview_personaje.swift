@@ -18,7 +18,7 @@ struct PreviewPersonaje: View {
             imagen
                 .resizable()
                 .scaledToFit()
-                .frame(width: 50)
+                .frame(width: 100)
                 .clipShape(Rectangle())
         } placeholder: {
             ProgressView()

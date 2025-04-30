@@ -40,7 +40,6 @@ struct PantallaPersonajes: View {
                                     Text("\(personaje.name)")
                                         .foregroundStyle(Color.red)
                                         .bold()
-                                        .underline()
                                         
                                     Spacer()
                                     
