@@ -13,22 +13,44 @@ struct PreviewPersonaje: View {
     
     
     var body: some View {
-        Text(controlador.personaje?.originPlanet?.name ?? "Planeta")
-        AsyncImage(url: URL(string: controlador.personaje?.originPlanet!.image ?? "")){imagen in
-            imagen
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100)
-                .clipShape(Rectangle())
-        } placeholder: {
-            ProgressView()
-                .padding()
-                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                .background(Color.red)
-                .clipShape(Circle())
-        }.onAppear {
-            print(personaje)
+        VStack{
+            Text(controlador.personaje?.name ?? "Personaje")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.red)
+ 
+            AsyncImage(url: URL(string: controlador.personaje?.image ?? "")) { imagen in
+                imagen
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 250, height: 250)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .shadow(color: .pink.opacity(0.5), radius: 10, x: 0, y: 5)
+            } placeholder: {
+                ProgressView()
+                    .padding()
+                    .frame(width: 100, height: 100)
+                    .background(Color.pink.opacity(0.3))
+                    .clipShape(Circle())
+            }
+            VStack(alignment: .leading, spacing: 8) {
+                            Text("Nombre: \(personaje.name)")
+                            Text("Raza: \(personaje.race)")
+                            Text("Género: \(personaje.gender)")
+                            Text("Afiliación: \(personaje.affiliation)")
+                            Text("Ki: \(personaje.ki)")
+                            Text("Máximo Ki: \(personaje.maxKi)")
+                            Text("Descripción: \(personaje.description)")
+                        }
+                        .padding()
+                        .background(Color.yellow)
+                        .cornerRadius(15)
+                        .foregroundColor(.red)
         }
+        .padding()
+        .background(Color.orange)
+        .cornerRadius(25)
+        .shadow(radius: 5)
     }
 }
 

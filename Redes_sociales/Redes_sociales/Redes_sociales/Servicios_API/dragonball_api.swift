@@ -19,6 +19,16 @@ class DragonBallAPI: Codable{
         let ubicacionRecurso = "/characters/\(id)"
         return await descargar(recurso: ubicacionRecurso)
     }
+    func descargarPaginaPlanetas() async -> PaginaResultadoPlaneta?{
+        let ubicacionRecurso = "/planets"
+        
+        return await descargar(recurso: ubicacionRecurso)
+    }
+    func descargarInformacionPlaneta(id: Int) async -> Planeta?{
+        let ubicacionRecurso = "/planets/\(id)"
+        
+        return await descargar(recurso: ubicacionRecurso)
+    }
     
     private func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico?{
         do{

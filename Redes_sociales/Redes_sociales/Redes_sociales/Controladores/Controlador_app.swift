@@ -19,6 +19,7 @@ public class ControladorAplicacion{
     
     //Seccion DB
     var paginaResultados: PaginaResultado? = nil
+    var paginaResultadosPlaneta: PaginaResultadoPlaneta? = nil
     var personaje: MonoChino? = nil
     
     init(){
@@ -26,6 +27,8 @@ public class ControladorAplicacion{
             await self.descargarPublicaciones()
             
             await self.descargarMonosChinos()
+            
+            await self.descargarPlanetas()
         }
     }
     func descargarMonosChinos() async{
@@ -43,6 +46,21 @@ public class ControladorAplicacion{
             await self.descargarInfoPersonajes(id: id)
         })
     }
+    //-------------------
+    func descargarPlanetas() async{
+        guard let paginaDescargada: PaginaResultadoPlaneta = try? await DragonBallAPI().descargarPaginaPlanetas() else{return}
+        self.paginaResultadosPlaneta = paginaDescargada
+        
+    }
+    func descargarInfoPlanetas(id: Int) async{
+        guard let planeta: Planeta = try? await DragonBallAPI().descargarInformacionPlaneta(id: id) else{return}
+    }
+    func descargarInformacionPlaneta(id: Int){
+        Task.detached(operation: {
+            await self.descargarInfoPlanetas(id: id)
+        })
+    }
+    //---------------------
     func descargarPublicaciones() async{
         defer{
             print("Esta funcion se manda a llamar despues de todos los awaits en fi funcion \(#function)")

@@ -1,29 +1,29 @@
 //
-//  pantalla_personajes.swift
+//  pantalla_planetas.swift
 //  Redes_sociales
 //
-//  Created by alumno on 4/4/25.
+//  Created by alumno on 5/2/25.
 //
 
 import SwiftUI
 
-struct PantallaPersonajes: View {
+struct PantallaPlanetas: View {
     @Environment(ControladorAplicacion.self) var controlador
     var body: some View {
-        if(controlador.paginaResultados != nil){
+        if(controlador.paginaResultadosPlaneta != nil){
             NavigationStack{
                 ScrollView{
                     LazyVStack{
-                        ForEach(controlador.paginaResultados!.items){ personaje in
+                        ForEach(controlador.paginaResultadosPlaneta!.items){ planeta in
                             
                             HStack(alignment: VerticalAlignment.center){
                                 NavigationLink{
-                                    PreviewPersonaje(personaje: personaje)
+                                    Text("lllllllll")
                                     //Text("Hola \(controlador.personaje?.originPlanet?.name)")
                                     //AsyncImage(url: URL(string: controlador.personaje?.originPlanet!.image ?? ""))
                                 }label:{
                                     Spacer()
-                                    AsyncImage(url: URL(string: personaje.image)){imagen in
+                                    AsyncImage(url: URL(string: planeta.image)){imagen in
                                         imagen
                                             .resizable()
                                             .scaledToFit()
@@ -37,7 +37,7 @@ struct PantallaPersonajes: View {
                                             .clipShape(Circle())
                                     }
                                     Spacer()
-                                    Text("\(personaje.name)")
+                                    Text("\(planeta.name)")
                                         .foregroundStyle(Color.red)
                                         .bold()
                                         
@@ -46,7 +46,7 @@ struct PantallaPersonajes: View {
                                     
                                         
                                 }.simultaneousGesture(TapGesture().onEnded({
-                                    controlador.descargarInformacionPersonaje(id: personaje.id)
+                                    controlador.descargarInformacionPlaneta(id: planeta.id)
                                 }))
                             }
                             .frame(maxWidth: 300)
@@ -59,17 +59,12 @@ struct PantallaPersonajes: View {
                         }
                     }
                 }
-                .background(Color.orange)
             }
-            
-            
-            
         }
-        
     }
 }
 
 #Preview {
-    PantallaPersonajes()
+    PantallaPlanetas()
         .environment(ControladorAplicacion())
 }

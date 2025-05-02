@@ -28,7 +28,7 @@ struct MenuNavegacion: View {
                     }
                 }
             
-            Text("Hola una vez más")
+            PantallaPlanetas()
                 .tabItem {
                     Label("Etiqueta de esta label", systemImage: "circle")
                 }
